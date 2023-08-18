@@ -22,12 +22,14 @@ tree_t *insert(type_data data, tree_t *tree)
     {
         return init(data);
     }
-    else if (data < tree->data)
 
-        tree->left = insert(data, tree->left);
-    else
-        tree->right = insert(data, tree->right);
+    data < tree->data ? (tree->left = insert(data, tree->left)) : (tree->right = insert(data, tree->right));
 
+    /*  else if (data < tree->data)
+
+          tree->left = insert(data, tree->left);
+      else tree->right = insert(data, tree->right);
+  */
     return (tree);
 }
 
