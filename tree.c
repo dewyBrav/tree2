@@ -1,5 +1,6 @@
 #include "tree.h"
 
+
 tree_t *init(type_data data)
 {
     tree_t *newTree = (tree_t *)malloc(sizeof(tree_t));
@@ -83,6 +84,6 @@ void treePostFixPrint(tree_t *tree)
     {
         treePostFixPrint(tree->left);
         treePostFixPrint(tree->right);
-        printf("%d ", tree->data);
+        printf("%d ",tree->data);
     }
 }
